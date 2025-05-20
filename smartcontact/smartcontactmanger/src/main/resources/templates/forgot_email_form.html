@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+</head>
+
+<body>
+<section style="background-image:url(https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721606400&semt=ais_user);  background-repeat:no-repeat; background-size:cover; height:650px; filter:brightness(80%)">
+    <div id="login">
+        <div class="container rounded" style="color:#4CC082;font-family:Playwrite CZ, cursive;">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" style="height:220px;" class="col-md-12">
+                        <div th:if="${session.message}" class="container">
+                            <div class="alert alert-danger my-2 text-center" role="alert">
+                                <span th:text="${session.message}"></span>
+                            </div>
+                            <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                        </div>
+
+                        <h3 class="text-center m-3">Your Registered Email</h3>
+                        <form th:action="@{/send-otp}" method="post">
+                            <div class="form-group">
+                                <input name="email" required type="email" placeholder="Enter email here"
+                                       class="form-control"/>
+                            </div>
+                            <div class="container text-center mt-3">
+                                <button class="btn" style="background-color:#4CC082;color:white;font-family:Playwrite CZ, cursive;">
+                                    Send OTP
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

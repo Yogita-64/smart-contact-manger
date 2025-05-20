@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title> This Is home Page</title>
+</head>
+<body>
+<section>
+
+<div class="card mr-3 ml-3">
+<div class="card-body">
+
+<h1 class="text-center">Add Contact</h1>
+<div class="container-fluid mt-1">
+<div class="row">
+<div class="col-md-8 offset-md-2">
+
+
+<form action="#"
+       th:object="${contact}"x
+       enctype="multipart/form-data"
+       method="post"
+       th:action="@{/user/process-contact}"
+       class="mt-2"
+         >
+         
+         <!-- First Name -->
+         <div class="input-group">
+            <div class="input-group-prepend">
+               <div class="input-group-text mx-3">
+                <i class="fa fa-plus p-2 "></i>
+              </div>
+          </div>
+         
+             <input  required type="text"  id="firstName" name="name" placeholder="Enter name here " class=" form-control"/>
+        </div>
+        
+          <!-- Second Name -->
+          
+          <div class="input-group mt-3">
+            <div class="input-group-prepend">
+               <div class="input-group-text mx-3">
+                <i class="fas fa-user-alt p-2 "></i>
+              </div>
+          </div>
+         
+             <input required type="text"  id="secondName" name="secondName" placeholder="Enter Nickname here " class=" form-control"/>
+        </div>
+          
+          
+          
+          <!-- Phone field -->
+          
+          <div class="input-group mt-3">
+            <div class="input-group-prepend">
+               <div class="input-group-text mx-3">
+                <i class="fas fa-phone p-2 "></i>
+              </div>
+          </div>
+         
+             <input  required min="10"  type="number"  id="phone" name="phone" placeholder="Enter Phone Number here " class=" form-control"/>
+        </div>
+        
+        
+        <!-- Email field -->
+          
+          <div class="input-group mt-3">
+            <div class="input-group-prepend">
+               <div class="input-group-text mx-3">
+                <i class="fa-regular fa-at p2"></i>
+              </div>
+          </div>
+         
+             <input  required type="email"  id="email" name="email" placeholder="Enter email here " class=" form-control"/>
+        </div>
+        
+        
+         <!-- Work field -->
+          <div class="input-group mt-3">
+            <div class="input-group-prepend">
+               <div class="input-group-text mx-3">
+                <i class="fas fa-briefcase p-2 "></i>
+              </div>
+              
+          </div>
+          
+         
+             <input required  type="text"  id="work" name="work" placeholder="Enter your work here " class=" form-control"/>
+        </div>
+        
+        <!-- contact description here  -->
+        <div class="form-group mt-3 p-3">
+        
+        <textarea    placeholder=" enter contact description" name="description" id="description" class="form-control" rows="10"></textarea>
+        </div>
+        
+        
+        <!-- contact image  -->
+        <div class="custom-file">
+        <input type="file"  name="profileImage"/>
+        </div>
+        <div class="container text-center">
+        
+        <button class="btn btn-outline-primary">Save Contact</button>
+        </div>
+          
+        
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script>
+    
+    $(document).ready(()=>{
+        $('.item').removeClass('active');
+        $('#add-link').addClass('active');
+    })
+</script>
+</section>
+  
+</body>
+</html>

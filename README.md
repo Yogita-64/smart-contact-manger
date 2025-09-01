@@ -22,7 +22,8 @@ The Sign-Up feature allows new users to create an account securely by providing 
 
 Once a user logs in, their profile displays all previously saved contacts. Users can add new contacts, search for specific contacts, and manage their contact list efficiently. Built with Spring Boot, Spring Data JPA, and Thymeleaf for secure and dynamic contact management.
 
-<img width="1871" height="802" alt="Screenshot 2025-09-01 201801" src="https://github.com/user-attachments/assets/af9447d0-0349-4480-92d2-15da5a6fe050" />
+<img width="1882" height="805" alt="Screenshot 2025-09-01 204542" src="https://github.com/user-attachments/assets/0cce6249-9b8b-4a7e-88aa-7950805bc22c" />
+
 
 Add Contact Module
 

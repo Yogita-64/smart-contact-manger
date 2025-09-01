@@ -24,3 +24,16 @@ Once a user logs in, their profile displays all previously saved contacts. Users
 
 <img width="1871" height="802" alt="Screenshot 2025-09-01 201801" src="https://github.com/user-attachments/assets/af9447d0-0349-4480-92d2-15da5a6fe050" />
 
+Add Contact Module
+
+This module allows users to securely add new contacts to their personal contact list after logging in. It includes form validation, database integration, and ensures each contact is stored under the correct user profile. Built using Spring Boot, Spring Data JPA, and Thymeleaf.
+
+<img width="1886" height="833" alt="Screenshot 2025-09-01 202851" src="https://github.com/user-attachments/assets/fc745ec4-e146-4b04-a0a7-76e9542b3cad" />
+
+Settings Module
+
+This module allows logged-in users to change or reset their password securely. It ensures proper authentication and authorization, maintaining account security while enabling seamless password updates.
+
+
+<img width="1899" height="789" alt="Screenshot 2025-09-01 203220" src="https://github.com/user-attachments/assets/cb7e75b6-13ec-49ef-8103-cef06a52432b" />
+
